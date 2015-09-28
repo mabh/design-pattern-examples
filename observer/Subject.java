@@ -14,11 +14,15 @@ public class Subject implements ISubject {
 
 	public void increment() {
 		this.state++;
+		
+		//injectable via AOP
 		notifyObservers(this);
 	}
 	
 	public void decrement() {
 		this.state--;
+		
+		//injectable via AOP
 		notifyObservers(this);
 	}
 	
